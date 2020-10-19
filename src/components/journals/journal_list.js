@@ -17,8 +17,9 @@ class JournalList extends Component {
       isOpen: true
     };
   }
+
   render() {
-    return <div>{this.state.greeting}</div>
+    return <h2>{this.props.heading}</h2>
   }
 }
 
