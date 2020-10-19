@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      Hello
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <h1>React, Props, and State Deep Dive</h1>
+      </div>
+    );
+  }
 }
-
-export default App;
