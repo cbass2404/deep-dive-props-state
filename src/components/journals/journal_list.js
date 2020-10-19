@@ -20,7 +20,19 @@ class JournalList extends Component {
   }
 
   clearEntries = () => {
-    this.setState({ journalData: [] });
+    this.setState({ journalData: [], isOpen: false });
+  };
+
+  showAllEntries = () => {
+    this.setState({ journalData: rawJournalData, isOpen: true });
+  };
+
+  toggleStatus = () => {
+    if (this.state.isOpen) {
+      this.setState({ journalData: [], isOpen: false });
+    } else {
+      this.setState({ journalData: rawJournalData, isOpen: true });
+    }
   };
 
   render() {
@@ -41,6 +53,8 @@ class JournalList extends Component {
         {journalEntries}
 
         <button onClick={this.clearEntries}>Clear Journal Entries</button>
+        <button onClick={this.showAllEntries}>Show All Entries</button>
+        <button onClick={this.toggleStatus}>Toggle Entries</button>
       </div>
     );
   }
